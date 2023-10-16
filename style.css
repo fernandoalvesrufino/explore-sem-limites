@@ -20,6 +20,10 @@
   --bg-card: hsl(0, 0%, 100%);
   --bg-color-footer:  hsl(242, 50%, 38%);
   --bg-gradiente-footer: hsl(244, 38%, 28%);
+  --bg-color-button:  hsl(242, 50%, 38%);
+  --bg-gradiente-button: hsl(244, 38%, 28%);
+  --bg-color-button-hover:  hsl(242, 56%, 31%);
+  --bg-gradiente-button-hover: hsl(244, 40%, 24%);
   
   --border-color: hsl(244, 38%, 28%);
 }
@@ -80,8 +84,10 @@ p {
   display: flex;
 }
 
-.main img {
+.main .arrow {
   margin: 0 auto;
+
+  animation: moveUpDown 2s ease-in-out infinite;
 }
 
 h1, h2 {
@@ -174,9 +180,15 @@ button {
   border: none;
   border-radius: 1.6rem;
 
-  background: linear-gradient(96deg, var(--bg-color-footer) 0%, var(--bg-gradiente-footer) 99.68%);
+  background: linear-gradient(96deg, var(--bg-color-button) 0%, var(--bg-gradiente-button) 99.68%);
   
   width: 16rem;
+
+  cursor: pointer;
+}
+
+button:hover {
+  background: linear-gradient(96deg, var(--bg-color-button-hover) 0%, var(--bg-gradiente-button-hover) 99.68%);
 }
 
 button p {
@@ -201,4 +213,17 @@ footer {
 
 footer p {
   color: var(--text-footer-color);
+}
+
+
+@keyframes moveUpDown {
+  0% {
+      transform: translateY(0);
+  }
+  50% {
+      transform: translateY(20px); /* Ajuste a distância da animação para cima */
+  }
+  100% {
+      transform: translateY(0);
+  }
 }
