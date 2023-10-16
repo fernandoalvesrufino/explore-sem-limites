@@ -33,19 +33,15 @@ body {
   flex-direction: column;
 
   width: 100%;
-
-  background: black;
 }
 
 .app {
   max-width: 36.4rem;
   
   margin: 0 auto;
-
-  background: var(--bg-app);
 }
 
-.main, .contact {
+body, .app, .main, .contact {
   background: var(--bg-app);
 }
 
